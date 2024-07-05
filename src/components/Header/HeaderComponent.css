@@ -1,0 +1,14 @@
+.header {
+  background-color: #ccc;
+  padding: 15px;
+}
+
+.header h1 {
+  font-size: 24px; /* Tamaño de fuente un poco más pequeño */
+  color: #555; /* Color gris */
+}
+
+.header h2 {
+  font-size: 15px; /* Tamaño de fuente un poco más grande */
+  color: #777; /* Gris más claro */
+}
