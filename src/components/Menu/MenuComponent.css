@@ -42,7 +42,7 @@
 }
 
 .sidebar nav ul li {
-  margin: 10px 0;
+  margin: 10px 0 0 15px;
 }
 
 .sidebar nav ul li .menu-item {
@@ -60,6 +60,12 @@
   margin-left: auto;
 }
 
+.sidebar nav ul li.selected > .menu-item {
+  background-color: #444;
+  border-radius: 10px;
+  padding: 5px;
+}
+
 .submenu {
   list-style: none;
   padding: 0;
@@ -68,12 +74,31 @@
 }
 
 .submenu li {
+  display: flex;
+  align-items: center;
   margin: 5px 0;
+}
+
+.submenu li.selected a {
+  background-color: #555;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.submenu-icon {
+  margin-right: 10px;
+  color: #fff;
 }
 
 .submenu li a {
   color: #fff;
   text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #444;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .sidebar .logout {
@@ -90,8 +115,8 @@
 
 .toggle-sidebar {
   position: fixed;
-  top: 50%;
-  left: 200px;
+  top: 80%;
+  left: 230px;
   transform: translateY(-50%);
   background-color: #333;
   color: #fff;
@@ -103,7 +128,7 @@
   transition: left 0.3s ease;
 }
 
-.main.full-width ~ .toggle-sidebar {
+.sidebar.hidden ~ .toggle-sidebar {
   left: 0;
   border-radius: 5px 0 0 5px;
 }
