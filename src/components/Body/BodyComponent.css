@@ -57,26 +57,24 @@
 
 .button-container {
   display: flex;
-  justify-content: flex-end; /* Alinea los botones a la derecha */
-
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.cancel-button,
-.execute-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  margin-left: 10px;
-}
-
-.cancel-button {
-  background-color: #ccc;
-  color: #333;
-}
-
-.execute-button {
+.cancel-button, .execute-button {
   background-color: #333;
   color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.execute-button {
+  background-color: green;
+}
+
+.cancel-button:hover, .execute-button:hover {
+  opacity: 0.8;
 }

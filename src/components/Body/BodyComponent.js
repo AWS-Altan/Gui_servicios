@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './BodyComponent.css';
+import GeneralError from '../Errors/GeneralError/GeneralError';
+import Success200 from '../Errors/Success200/Success200';
 
 const BodyComponent = () => {
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
+
+  const handleExecute = () => {
+    // Simulando la generación de un éxito
+    setSuccess("La configuración seleccionada se ha creado exitosamente");
+    setError(null);
+  };
+
+  const handleCancel = () => {
+    // Simulando la generación de un error
+    setError("Error al intentar guardar la configuración");
+    setSuccess(null);
+  };
+
+  const handleCloseError = () => {
+    setError(null);
+  };
+
+  const handleCloseSuccess = () => {
+    setSuccess(null);
+  };
+
   return (
     <div>
       <div className="body">
@@ -134,11 +159,14 @@ const BodyComponent = () => {
           </label>
         </div>
       </div>
+
       <div className="button-container">
-        <button className="cancel-button">Cancelar</button>
-        <button className="execute-button">Ejecutar</button>
+        <button className="cancel-button" onClick={handleCancel}>Cancelar</button>
+        <button className="execute-button" onClick={handleExecute}>Ejecutar</button>
       </div>
 
+      {error && <GeneralError message={error} onClose={handleCloseError} />}
+      {success && <Success200 message={success} onClose={handleCloseSuccess} />}
     </div>
   );
 }
