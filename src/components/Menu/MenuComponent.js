@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown, faSignOutAlt, faCog, faFileAlt, faChartBar, faEnvelope, faArrowLeft, faArrowRight, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faSignOutAlt, faCog, faFileAlt, faChartBar, faEnvelope, faCircle } from '@fortawesome/free-solid-svg-icons';
 import './MenuComponent.css';
 import imgLogo from "../../assets/logo.png";
 
