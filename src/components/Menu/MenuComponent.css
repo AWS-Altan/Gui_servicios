@@ -1,3 +1,12 @@
+.sidebar-container {
+  position: relative;
+  display: flex;
+}
+
+.sidebar-container.hidden {
+  display: none;
+}
+
 .sidebar {
   width: 200px;
   background: #333;
@@ -5,6 +14,11 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
 }
 
 .sidebar .logo {
@@ -18,8 +32,8 @@
 }
 
 .sidebar nav {
-  margin-top: 0; /* Eliminar cualquier margen superior que pueda haber */
-  flex-grow: 1; /* Ocupa el espacio disponible para empujar el logout hacia el final */
+  margin-top: 0;
+  flex-grow: 1;
 }
 
 .sidebar nav ul {
@@ -65,11 +79,31 @@
 .sidebar .logout {
   display: flex;
   align-items: center;
-  margin-top: auto; /* Empuja el logout al final del sidebar */
+  margin-top: auto;
 }
 
 .sidebar .logout a {
   color: #fff;
   text-decoration: none;
   margin-left: 10px;
+}
+
+.toggle-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 200px;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  border-radius: 0 5px 5px 0;
+  transition: left 0.3s ease;
+}
+
+.main.full-width ~ .toggle-sidebar {
+  left: 0;
+  border-radius: 5px 0 0 5px;
 }
