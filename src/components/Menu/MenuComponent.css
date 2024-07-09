@@ -1,12 +1,75 @@
-.menu {
-  width: 15%;
-  background-color: #f0f0f0;
+.sidebar {
+  width: 200px;
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
-.logo-container {
-  padding: 10px; /* Ajusta según sea necesario */
+
+.sidebar .logo {
+  margin-bottom: 0;
+  text-align: center;
 }
-  
-.logo {
-  width: 100px; /* Ajusta el ancho según sea necesario */
-  height: auto; /* Para mantener la proporción */
+
+.sidebar .logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sidebar nav {
+  margin-top: 0; /* Eliminar cualquier margen superior que pueda haber */
+  flex-grow: 1; /* Ocupa el espacio disponible para empujar el logout hacia el final */
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 10px 0;
+}
+
+.sidebar nav ul li .menu-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar nav ul li .menu-item span {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+.sidebar nav ul li .caret-icon {
+  margin-left: auto;
+}
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.submenu li {
+  margin: 5px 0;
+}
+
+.submenu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar .logout {
+  display: flex;
+  align-items: center;
+  margin-top: auto; /* Empuja el logout al final del sidebar */
+}
+
+.sidebar .logout a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
 }
