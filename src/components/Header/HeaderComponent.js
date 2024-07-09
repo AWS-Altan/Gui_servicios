@@ -13,12 +13,12 @@ const HeaderComponent = ({ toggleSidebar }) => {
     <header className="header">
       <div className="header-content">
         <div className="welcome">
-          <h1>Bienvenido, Nombre</h1>
+          <h1>Bienvenido, Ricardo</h1>
           <p>Portal de Configuración Clientes</p>
         </div>
         <div className="user-info">
           <img src={userImage} alt="Peter Parker" className="user-avatar" onClick={toggleMenu} />
-          <span onClick={toggleMenu}>Peter Parker</span>
+          <span onClick={toggleMenu}>Ricardo Lugo</span>
           {isMenuOpen && (
             <ul className="dropdown-menu">
               <li><a href="#update-profile">Actualizar perfil</a></li>
